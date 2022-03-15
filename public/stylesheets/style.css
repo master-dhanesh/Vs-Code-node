@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  padding: 5vmax;
+  background-color: rgb(230, 230, 230);
+}
+
+ul > li {
+  font: 300 1.5vmax "Poppins";
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: .5vmax;
+  transition: .5s all;
+}
+
+ul > li:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+ul > li:first-child {
+  margin-bottom: 2vmax;
+}
+
+ul > li > a:first-child,
+ul > li > a:last-child {
+  color: #000;
+  text-decoration: none;
+  transition: .5s all;
+}
+
+ul > li > a:first-child:hover {
+  color: rgb(55, 138, 233);
+}
+
+ul > li > a:last-child:hover {
+  color: rgb(230, 58, 58);
+}
+
+ul  > li  input {
+  padding: 1vmax;
+  border-radius: .5vmax;
+  border: 1px solid black;
+  outline: none;
+  font: 300 1.5vmax "Poppins";
+
+}
+
+.showform {
+  height: 100%;
+  width: 70%;
+  /* padding-top: 5vmax ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+.showform > textarea {
+  width: 100%;
+  height: 90%;
+  resize: none;
+  border: none;
+  padding: 1vmax;
+  outline: none;
+  font: 300 1.5vmax "consolas";
+}
+
+.showform > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.showform > div > button {
+  border: none;
+  outline: none;
+  padding: .8vmax 2vmax;
+  font: 300 1.5vmax "Poppins";
+  background-color: transparent;
+  transition: .5s all;
+  color: rgb(221, 72, 72);
+}
+
+.showform > div> button:hover {
+  background-color: rgb(235, 235, 235);
+  color: #000;
+}

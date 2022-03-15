@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+
+    <ul>
+      <li>
+        <form action="/create" method="get">
+          <input type="text" autocomplete="off" placeholder="File Name" name="filename">
+        </form>
+      </li>
+  
+      <% files.forEach(function(f) { %>
+      <li>
+        <a href="/read/<%= f %>"><%= f %></a>
+        &nbsp;
+        <a href="/delete/<%= f%>"><i class="ri-delete-bin-6-fill"></i></a>
+      </li>
+      <% }) %>
+    </ul>
+    <form class="showform" action="/save/<%= filename%>" method="POST">
+      <div>
+        <button type="button"><%= filename%></button>
+        <button>Save</button>
+      </div>
+      
+      <textarea name="filedata"><%= filedata %></textarea> <br>
+    </form>
+
+  </section>
+  
+</body>
+</html>
