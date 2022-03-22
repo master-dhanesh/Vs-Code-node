@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const User = require('../public/Files/User.json');
+
 
 const fs = require('fs')
 const path = require('path')
@@ -38,3 +40,10 @@ router.get('/delete/:filename', function (req, res, next) {
 });
 
 module.exports = router;
+
+
+
+router.post('/register', function (req, res, next) {
+    const data = [...User, req.body];
+    res.send(data);
+});
